@@ -750,7 +750,7 @@ header .profile_img img {
 /* :::::::::: SUBSCRIBE :::::::::: */
 #subscribe {
   padding: 8rem;
-  background: url(/images/pic.png);
+  background: url(images/pic.png);
 }
 
 #subscribe .subscribe_content {
@@ -810,7 +810,7 @@ header .profile_img img {
 /* :::::::::: USER PROFILE :::::::::: */
 #user {
   padding-bottom: 2rem;
-  background: url(/images/user_banner.png);
+  background: url(images/user_banner.png);
   background-size: cover;
   background-position: center;
   height: 16rem;
