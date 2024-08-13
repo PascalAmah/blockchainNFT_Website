@@ -1,24 +1,49 @@
-<header class="header_scroll">
-  <div class="navbar">
-    <div class="logo">
-      <a href="home.html"><h3>Pac<span>Ai</span></h3></a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header_scroll">
+      <div class="navbar">
+        <div class="logo">
+          <a href="home.html"
+            ><h3>Pac<span>Ai</span></h3></a
+          >
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="#hero">EXPLORE</a></li>
-        <li><a href="#hot_trend">TRENDING NFTs</a></li>
-        <li><a href="#live_auction">AUCTIONED NFTs</a></li>
-        <li><a href="#influencers">INFLUENCERS</a></li>
-      </ul>
-    </nav>
+        <nav id="menu">
+          <ul>
+            <li><a href="#hero">EXPLORE</a></li>
+            <li><a href="#hot_trend">TRENDING NFTs</a></li>
+            <li><a href="#live_auction">AUCTIONED NFTs</a></li>
+            <li><a href="#influencers">INFLUENCERS</a></li>
+            <li class="user_profile mobile"><a href="user.html">USER PROFILE</a></li>
+          </ul>
+          
+        </nav>
 
-    <div class="nav_item">
-      <a href=""><button class="btn_1">Connect Wallet</button></a>
+        <div class="nav_item">
+          <a href=""><button class="btn_1">Connect Wallet</button></a>
 
-      <div class="profile_img">
-        <a href="user.html"><img src="images/pascal-2.png" alt="profile-image"></a>
+          <div class="profile_img large_screen">
+            <a href="user.html"
+              ><img src="images/pascal-2.png" alt="profile-image"
+            /></a>
+          </div>
+
+          <div class="menu_toggle mobile">
+            <label for="check">
+              <input type="checkbox" id="check"/> 
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
+  </body>
+</html>
