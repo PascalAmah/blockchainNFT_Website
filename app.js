@@ -73,7 +73,7 @@
 
       // Add event listeners to links within the dynamically loaded pages
       const navLinks = document.querySelectorAll(
-        "#header .profile_img a, #header .user_profile a, .logo a, .footer_link a, .cta_btn a"
+        "#header .profile_img a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
       );
       navLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
