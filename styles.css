@@ -55,6 +55,12 @@ a {
   letter-spacing: 0.1rem;
   transition: 0.5s ease;
   cursor: pointer;
+  border: none;
+
+}
+
+.btn_1:hover {
+  background: var(--main-color);
 }
 
 .btn_2 {
@@ -68,6 +74,10 @@ a {
   letter-spacing: 0.1rem;
   transition: 0.5s ease;
   cursor: pointer;
+}
+
+.btn_2:hover {
+  background: var(--main-color);
 }
 
 .btn_3 {
@@ -86,7 +96,7 @@ a {
 
 section {
   width: 100%;
-  padding: 4rem 4%;
+  padding: 3rem 4%;
 }
 
 section .headings {
@@ -165,11 +175,14 @@ hr {
   }
 }
 
+
+
+
 /* :::::::::: HEADER :::::::::: */
 header {
   color: white;
   margin: 0 auto;
-  padding: 2.2rem 4%;
+  padding: 1rem 4%;
   position: fixed;
   top: 0;
   left: 0;
@@ -267,7 +280,7 @@ header .profile_img img {
 
 /* :::::::::: HERO :::::::::: */
 #hero {
-  padding-top: 12rem;
+  padding-top: 10rem;
   height: 100vh;
 }
 
@@ -838,7 +851,7 @@ header .profile_img img {
   border: none;
   width: 100%;
   height: 100%;
-  padding: 0.2rem;
+  padding-left: 0.4rem;
   color: var(--white);
   font-size: 1rem;
 }
@@ -862,7 +875,7 @@ header .profile_img img {
 
 /* :::::::::: USER PROFILE :::::::::: */
 #user {
-  margin-top: 9rem;
+  margin-top: 6.7rem;
   position: relative;
 }
 
@@ -1046,6 +1059,9 @@ header .profile_img img {
   opacity: 1;
 }
 
+
+
+
 /* :::::::::: PRIVACY AND SUPOORT :::::::::: */
 #privacy {
   padding-top: 10rem;
@@ -1099,7 +1115,7 @@ footer {
   );
   backdrop-filter: blur(1.25rem);
   color: white;
-  padding: 4rem 12%;
+  padding: 4rem 12% 2rem 12%;
   width: 100%;
 }
 
@@ -1155,8 +1171,13 @@ footer .footer_links .footer_link a {
 
 footer .copyright {
   text-align: center;
+  margin-top: 6rem;
   color: var(--link-color);
 }
+
+
+
+
 
 @media (max-width: 1440px) {
   html {
@@ -1210,7 +1231,7 @@ footer .copyright {
     position: absolute;
     justify-self: center;
     width: 100vw;
-    top: 6rem;
+    top: 5rem;
     left: 0;
     right: 0;
     background: linear-gradient(
@@ -1316,7 +1337,7 @@ footer .copyright {
   }
 
   #hero {
-    padding-top: 12rem;
+    padding-top: 10rem;
     height: auto;
   }
 
@@ -1335,7 +1356,7 @@ footer .copyright {
   }
 
   #hero .nft_cards {
-    width: 90%;
+    width: 70%;
     height: 33rem;
     margin: auto;
   }
