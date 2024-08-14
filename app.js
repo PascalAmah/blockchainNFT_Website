@@ -17,6 +17,7 @@
         // Add event listeners to navigation links
         addNavigationListeners();
         attachEventListeners();
+        initializeNavLinks();
         // toggleMenu();
       })
       .catch((error) => {
@@ -46,6 +47,7 @@
             document.getElementById("main-content").classList.remove("hidden");
             addNavigationListeners();
             attachEventListeners();
+            initializeNavLinks();
             toggleMenu();
 
             loader.addEventListener(function () {
@@ -72,24 +74,28 @@
       });
 
       // Add event listeners to links within the dynamically loaded pages
-      const navLinks = document.querySelectorAll(
-        "#header .profile_img a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
-      );
-      navLinks.forEach((link) => {
-        link.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
+      function initializeNavLinks() {
+        const navLinks = document.querySelectorAll(
+          "#header .profile_img a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
+        );
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
 
-          // Extract page name
-          const page = this.getAttribute("href").split(".html")[0];
+            // Extract page name
+            const page = this.getAttribute("href").split(".html")[0];
 
-          // Hide main content and show the loader
-          document.getElementById("main-content").classList.add("hidden");
-          document.getElementById("loader").style.display = "flex";
+            // Hide main content and show the loader
+            document.getElementById("main-content").classList.add("hidden");
+            document.getElementById("loader").style.display = "flex";
 
-          // Load the new page
-          loadPage(page);
+            // Load the new page
+            loadPage(page);
+          });
         });
-      });
+      }
+
+      initializeNavLinks();
     }
 
     // Profile Update function
