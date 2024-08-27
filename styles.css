@@ -736,10 +736,6 @@ header .profile_img img {
   display: flex;
 }
 
-.section_cards .cards .card .price svg {
-  height: fit-content;
-}
-
 .section_cards .cards .card .price_details .price p {
   font-size: 1.2rem;
   text-align: end;
@@ -747,6 +743,12 @@ header .profile_img img {
 
 .section_cards .cards .card .price_details .price p span {
   font-size: 0.9rem;
+  align-content: center;
+}
+
+.section_cards .cards .card .price_details .price p svg {
+  align-self: center;
+  padding-top: .1rem;
 }
 
 .section_cards .cards .card .buy_btn {
