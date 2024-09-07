@@ -20,23 +20,144 @@
             <li><a href="#hot_trend">TRENDING NFTs</a></li>
             <li><a href="#live_auction">AUCTIONED NFTs</a></li>
             <li><a href="#influencers">INFLUENCERS</a></li>
-            <li class="user_profile mobile"><a href="user.html">USER PROFILE</a></li>
+            <li class="user_profile mobile">
+              <a href="user.html">USER PROFILE</a>
+            </li>
           </ul>
-          
         </nav>
 
         <div class="nav_item">
-          <a href=""><button class="btn_1">Connect Wallet</button></a>
+          <button id="connectWalletButton" class="btn_1">Connect Wallet</button>
+          <p id="walletAddress"></p>
+          <div class="profile_container large_screen">
+            <div class="profile_img">
+              <img src="images/pascal-2.png" alt="profile-image" />
+            </div>
 
-          <div class="profile_img large_screen">
-            <a href="user.html"
-              ><img src="images/pascal-2.png" alt="profile-image"
-            /></a>
+            <div class="profile_dropdown">
+              <ul>
+                <li>
+                  <a href="user.html">
+                    <div class="profile_img">
+                      <img src="images/pascal-2.png" alt="profile-image" />
+                    </div>
+                    <div>
+                      <p>Pascal Amah</p>
+                      <p>pascalamaliri@gmail.com</p>
+                    </div>
+                  </a>
+                </li>
+                <hr />
+                <li>
+                  <a href="user.html">
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#ad1aaf"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <title>profile_round [#1342]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            id="Dribbble-Light-Preview"
+                            transform="translate(-140.000000, -2159.000000)"
+                            fill="#ad1aaf"
+                          >
+                            <g
+                              id="icons"
+                              transform="translate(56.000000, 160.000000)"
+                            >
+                              <path
+                                d="M100.562548,2016.99998 L87.4381713,2016.99998 C86.7317804,2016.99998 86.2101535,2016.30298 86.4765813,2015.66198 C87.7127655,2012.69798 90.6169306,2010.99998 93.9998492,2010.99998 C97.3837885,2010.99998 100.287954,2012.69798 101.524138,2015.66198 C101.790566,2016.30298 101.268939,2016.99998 100.562548,2016.99998 M89.9166645,2004.99998 C89.9166645,2002.79398 91.7489936,2000.99998 93.9998492,2000.99998 C96.2517256,2000.99998 98.0830339,2002.79398 98.0830339,2004.99998 C98.0830339,2007.20598 96.2517256,2008.99998 93.9998492,2008.99998 C91.7489936,2008.99998 89.9166645,2007.20598 89.9166645,2004.99998 M103.955674,2016.63598 C103.213556,2013.27698 100.892265,2010.79798 97.837022,2009.67298 C99.4560048,2008.39598 100.400241,2006.33098 100.053171,2004.06998 C99.6509769,2001.44698 97.4235996,1999.34798 94.7348224,1999.04198 C91.0232075,1998.61898 87.8750721,2001.44898 87.8750721,2004.99998 C87.8750721,2006.88998 88.7692896,2008.57398 90.1636971,2009.67298 C87.1074334,2010.79798 84.7871636,2013.27698 84.044024,2016.63598 C83.7745338,2017.85698 84.7789973,2018.99998 86.0539717,2018.99998 L101.945727,2018.99998 C103.221722,2018.99998 104.226185,2017.85698 103.955674,2016.63598"
+                                id="profile_round-[#1342]"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="privacy.html">
+                    <svg
+                      fill="#ad1aaf"
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 32 32"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <title>help</title>
+                        <path
+                          d="M16 1c-8.285 0-15 6.716-15 15s6.715 15 15 15 15-6.716 15-15-6.715-15-15-15zM16 4.75c6.213 0 11.25 5.037 11.25 11.25s-5.037 11.25-11.25 11.25-11.25-5.037-11.25-11.25c0.001-6.213 5.037-11.25 11.25-11.25zM16 6.625c-4.142 0-7.5 2.518-7.5 5.625 0 1.875 3.75 1.875 3.75 0 0-1.035 1.679-1.875 3.75-1.875s3.75 0.839 3.75 1.875c0 1.035-1.875 0.937-3.75 1.875-0.117 0.059-0.217 0.133-0.293 0.206-1.549 0.981-1.582 2.665-1.582 3.545v0.937c0 1.038 0.836 1.875 1.875 1.875s1.875-0.836 1.875-1.875v-0.937c0-2.813 5.625-2.518 5.625-5.625s-3.357-5.626-7.5-5.626zM16 21.625c1.035 0 1.875 0.839 1.875 1.875s-0.839 1.875-1.875 1.875c-1.035 0-1.875-0.839-1.875-1.875s0.84-1.875 1.875-1.875z"
+                        ></path>
+                      </g>
+                    </svg>
+                    Help</a
+                  >
+                </li>
+                <hr />
+                <li>
+                  <a href="home.html">
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M21.593 10.943c.584.585.584 1.53 0 2.116L18.71 15.95c-.39.39-1.03.39-1.42 0a.996.996 0 0 1 0-1.41 9.552 9.552 0 0 1 1.689-1.345l.387-.242-.207-.206a10 10 0 0 1-2.24.254H8.998a1 1 0 1 1 0-2h7.921a10 10 0 0 1 2.24.254l.207-.206-.386-.241a9.562 9.562 0 0 1-1.69-1.348.996.996 0 0 1 0-1.41c.39-.39 1.03-.39 1.42 0l2.883 2.893zM14 16a1 1 0 0 0-1 1v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1.505a1 1 0 1 0 2 0V5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v13A2.5 2.5 0 0 0 5.5 21h7a2.5 2.5 0 0 0 2.5-2.5V17a1 1 0 0 0-1-1z"
+                          fill="#ad1aaf"
+                        ></path>
+                      </g>
+                    </svg>
+                    Sign Out</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="menu_toggle mobile">
             <label for="check">
-              <input type="checkbox" id="check"/> 
+              <input type="checkbox" id="check" />
               <span></span>
               <span></span>
               <span></span>

@@ -56,7 +56,6 @@ a {
   transition: 0.5s ease;
   cursor: pointer;
   border: none;
-
 }
 
 .btn_1:hover {
@@ -179,9 +178,6 @@ hr {
   }
 }
 
-
-
-
 /* :::::::::: HEADER :::::::::: */
 header {
   color: white;
@@ -276,10 +272,71 @@ header .profile_img {
   border-radius: 50%;
 }
 
+header .profile_container:hover .profile_dropdown,
+header .profile_container:hover .profile_dropdown:hover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
 header .profile_img img {
   width: 2.1rem;
   height: 2.1rem;
   border-radius: 50%;
+}
+
+header .profile_dropdown {
+  display: block;
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* background: linear-gradient(
+    120deg,
+    var(--secondary-color) -80%,
+    rgba(207, 175, 175, 0.05) 100%
+  ); */
+  backdrop-filter: blur(2.6rem);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+header .profile_dropdown ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+header .profile_dropdown ul li {
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem 1rem; */
+}
+
+header .profile_dropdown ul li a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 1rem 1.4rem;
+}
+
+header .profile_dropdown ul li a:hover {
+  background: var(--link-color);
 }
 
 /* :::::::::: HERO :::::::::: */
@@ -719,7 +776,7 @@ header .profile_img img {
 }
 
 .section_cards .cards .card .price_details .on_sale {
-  align-self: start; 
+  align-self: start;
 }
 
 .section_cards .cards .card .price_details .on_sale svg {
@@ -734,21 +791,24 @@ header .profile_img img {
 
 .section_cards .cards .card .price {
   display: flex;
+  flex-direction: column;
 }
 
 .section_cards .cards .card .price_details .price p {
   font-size: 1.2rem;
   text-align: end;
+  gap: 0.5rem;
 }
 
-.section_cards .cards .card .price_details .price p span {
+.section_cards .cards .card .price_details .price span {
   font-size: 0.9rem;
   align-content: center;
+  /* display: block; */
 }
 
 .section_cards .cards .card .price_details .price p svg {
   align-self: center;
-  padding-top: .1rem;
+  padding-top: 0.1rem;
 }
 
 .section_cards .cards .card .buy_btn {
@@ -1068,9 +1128,6 @@ header .profile_img img {
   opacity: 1;
 }
 
-
-
-
 /* :::::::::: PRIVACY AND SUPOORT :::::::::: */
 #privacy {
   padding-top: 10rem;
@@ -1113,8 +1170,108 @@ header .profile_img img {
   margin-top: 2rem;
 }
 
+/* :::::::::: CREATE NFT :::::::::: */
+#create {
+  padding-top: 8rem;
+}
 
+#create .img_container {
+  width: 100%;
+  height: 24rem;
+  padding: 0.94rem 1.5rem;
+  border-radius: 0.94rem;
+  opacity: 1;
+  background: linear-gradient(
+    106deg,
+    rgba(255, 255, 255, 0.1) -2%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(1.25rem);
+}
 
+#create .img_container .img_upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.94rem;
+  opacity: 1;
+  border: 0.16rem dashed #999393;
+  backdrop-filter: blur(1.25rem);
+}
+
+#create .img_container .img_upload .img_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.6rem;
+}
+
+#create .img_upload .img_content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+#create .img_upload .img_content button {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+#create form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+}
+
+#create form .form_group {
+  display: flex;
+  gap: 4.2rem;
+}
+
+#create form .form_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+#create form .form_info label {
+  width: fit-content;
+}
+
+#create form .form_info input {
+  background: transparent;
+  border: 1px solid var(--line-color);
+  outline: none;
+  height: 4rem;
+  border-radius: 0.8rem;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+#create form .form_info textarea {
+  background: transparent;
+  border: 1px solid var(--line-color);
+  outline: none;
+  border-radius: 0.8rem;
+  color: var(--white);
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  resize: none;
+}
+
+#create form button {
+  align-self: flex-end;
+}
 
 /* :::::::::: FOOTER :::::::::: */
 footer {
@@ -1185,10 +1342,6 @@ footer .copyright {
   color: var(--link-color);
 }
 
-
-
-
-
 @media (max-width: 1440px) {
   html {
     font-size: 14px;
@@ -1236,7 +1389,7 @@ footer .copyright {
   }
 
   header nav ul li a {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   #wallets .wallet_cards .wallet {
@@ -1248,7 +1401,7 @@ footer .copyright {
     width: 8rem;
     height: 8rem;
   }
-  
+
   #wallets .wallet p {
     margin-top: 1.8rem;
     font-size: 1.25rem;
@@ -1275,7 +1428,7 @@ footer .copyright {
   section .headings p {
     font-size: 1rem;
   }
-  
+
   section .headings h1 {
     font-size: 3.6rem;
   }
@@ -1296,10 +1449,10 @@ footer .copyright {
     display: block;
     position: absolute;
     justify-self: center;
-    width: 100vw;
+    width: 100dvw;
     top: 4.6rem;
-    left: 0;
-    right: 0;
+    left: -2rem;
+    right: -2rem;
     background: linear-gradient(
       120deg,
       var(--secondary-color) -80%,
@@ -1421,30 +1574,30 @@ footer .copyright {
     text-align: center;
   }
 
-  #hero .hero_cta .cta_btn button{
+  #hero .hero_cta .cta_btn button {
     font-size: 1.4rem;
-  } 
+  }
 
   #hero .nft_cards {
     width: 70%;
     height: 33rem;
     margin: auto;
   }
-  
+
   #wallets .wallet_cards {
     gap: 1.4rem;
   }
-  
+
   #wallets .wallet_cards .wallet {
     padding: 1.4rem;
     text-align: center;
   }
-  
+
   #wallets .wallet img {
     width: 6rem;
     height: 6rem;
   }
-  
+
   #wallets .wallet p {
     margin-top: 1.2rem;
     font-size: 1rem;
@@ -1465,7 +1618,7 @@ footer .copyright {
   }
 
   #how_it_works .work_dir p {
-    margin-top: .6rem;
+    margin-top: 0.6rem;
   }
 
   #collection .collection_img {
@@ -1553,7 +1706,7 @@ footer .copyright {
   .section_cards .cards .card {
     flex: 1 1 calc(20%);
   }
-  
+
   .section_cards .cards .user_details .profile_img {
     background: var(--white);
     border-radius: 50%;
@@ -1566,22 +1719,22 @@ footer .copyright {
   }
 
   .section_cards .cards .card .user_details .user_profile p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  
+
   .section_cards .cards .card .price_details {
     margin: 0 0.4rem;
   }
-  
+
   .section_cards .cards .card .price_details .on_sale span {
     font-size: 1rem;
   }
 
   .section_cards .cards .card .price_details .on_sale svg {
-    width: .8rem;
-    height: .8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
-  
+
   .section_cards .cards .card .price_details .price p {
     font-size: 1rem;
   }
@@ -1589,16 +1742,16 @@ footer .copyright {
   .section_cards .cards .card .price_details .price svg {
     width: 1rem;
   }
-  
+
   .section_cards .cards .card .price_details .price p span {
     font-size: 0.6rem;
   }
-  
+
   .section_cards .cards .card .buy_btn {
     width: calc(100% - 1rem);
     font-size: 1.2rem;
   }
-  
+
   #subscribe form button {
     padding: 0.2rem;
   }
@@ -1606,55 +1759,56 @@ footer .copyright {
   #user {
     margin-top: 5.6rem;
   }
-  
+
   #user .top_header {
     height: 14rem;
     padding: 0 4% 2rem;
   }
-  
+
   #user .top_header .user_profile {
     gap: 1.6rem;
     font-size: 1.2rem;
   }
-  
+
   #user .user_profile .user_img {
     width: 7rem;
     height: 7rem;
   }
-  
+
   #user .user_info {
     margin-top: 24rem;
     gap: 2rem;
   }
-  
+
   #user .user_info .header {
     gap: 3rem;
     font-size: 1.4rem;
   }
-  
+
   #user .user_info form {
     gap: 3rem;
     font-size: 1.2rem;
+    max-width: 100%;
   }
-  
+
   #user form .form_group {
     display: flex;
     gap: 3rem;
   }
-  
+
   #user form .form_info {
     gap: 1.6rem;
   }
- 
+
   #user form .form_info input {
     font-size: 1rem;
   }
-  
+
   #user form .form_info textarea {
     font-size: 1.2rem;
     resize: none;
   }
-  
+
   #user form button {
     align-self: flex-end;
   }
@@ -1663,21 +1817,56 @@ footer .copyright {
     padding-top: 8rem;
     gap: 4rem;
   }
-  
+
   #privacy img {
     height: 20rem;
   }
-  
+
   #privacy .content h4 {
     font-size: 1.6rem;
   }
-  
+
   #privacy .content p {
     font-size: 1rem;
   }
-  
+
   #privacy .content hr {
     margin-top: 1.6rem;
+  }
+
+  #create form {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  #create form .form_group {
+    display: flex;
+    gap: 3rem;
+  }
+
+  #create form .form_info {
+    gap: 1.6rem;
+  }
+
+  #create form .form_info input {
+    font-size: 1rem;
+  }
+
+  #create form .form_info textarea {
+    font-size: 1.2rem;
+    resize: none;
+  }
+
+  /* input,
+  textarea,
+  select {
+    font-size: 1rem;
+  } */
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    font-size: 15px;
   }
 
   footer .footer-content {
@@ -1688,12 +1877,11 @@ footer .copyright {
   footer .footer-content .footer_socials {
     width: 100%;
   }
-  
+
   footer .footer_links .footer_link {
     gap: 1.4rem;
     width: 50%;
   }
-  
 }
 
 @media (max-width: 480px) {
@@ -1702,15 +1890,15 @@ footer .copyright {
   }
 
   section .headings p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  
+
   section .headings h1 {
     font-size: 2rem;
   }
 
   .btn_2 {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 0.6rem 2.2rem;
   }
 
@@ -1737,28 +1925,31 @@ footer .copyright {
   }
 
   #hero .nft_cards {
-    width: 90%;
+    width: 100%;
     height: 33rem;
     margin: auto;
   }
-  
+
   #wallets .wallet_cards {
     gap: 0.6rem;
+    width: 100%;
   }
-  
+
   #wallets .wallet_cards .wallet {
     padding: 1rem;
     text-align: center;
+    flex: 1 1 calc(33.33% - 1rem);
+    max-width: calc(35% - 1rem);
   }
-  
+
   #wallets .wallet img {
     width: 4rem;
     height: 4rem;
   }
-  
+
   #wallets .wallet p {
     margin-top: 1.2rem;
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
   #how_it_works {
@@ -1776,18 +1967,18 @@ footer .copyright {
   }
 
   #how_it_works .work_dir .icon svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #how_it_works .work_dir .line svg {
     width: 4rem;
     height: 4rem;
   }
 
-  #how_it_works .work_dir .line svg {
-    width: 3rem;
-    height: 4rem;
-  }
-
   #how_it_works .work_dir p {
-    margin-top: .6rem;
-    font-size: .6rem;
+    margin-top: 0.6rem;
+    font-size: 0.6rem;
   }
 
   #collection_mobile .headings {
@@ -1806,7 +1997,24 @@ footer .copyright {
   .section_cards .cards .card {
     flex: calc(50% - 2rem);
   }
-  
+
+  .section_cards .cards .card .price_details .price p {
+    font-size: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .section_cards .cards .card .price_details .price span {
+    font-size: 0.8rem;
+    width: fit-content;
+  }
+
+  .section_cards .cards .card .price_details .price p svg {
+    width: 1rem;
+  }
+
   #influencers .cards .infl_profile p {
     font-size: 1rem;
   }
@@ -1818,12 +2026,12 @@ footer .copyright {
   #subscribe .subscribe_content p {
     font-size: 1.8rem;
   }
-  
+
   #subscribe form {
     width: 20.5rem;
     height: 4rem;
   }
-  
+
   #subscribe form button {
     padding: 0.4rem;
   }
@@ -1836,7 +2044,7 @@ footer .copyright {
   #user {
     margin-top: 5.6rem;
   }
-  
+
   #user .top_header {
     height: 10rem;
     padding: 0 4% 1rem;
@@ -1851,9 +2059,9 @@ footer .copyright {
   #user .top_header .upload_pic svg {
     width: 3rem;
   }
-  
+
   #user .top_header .followers p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   #user .top_header .user_profile {
@@ -1861,51 +2069,50 @@ footer .copyright {
     font-size: 1rem;
     bottom: -6rem;
   }
-  
+
   #user .user_profile .user_img {
     width: 6rem;
     height: 6rem;
   }
-  
+
   #user .user_info {
     margin-top: 18rem;
     gap: 2rem;
   }
-  
+
   #user .user_info .header {
     gap: 2rem;
     font-size: 1rem;
   }
-  
+
   #user .user_info form {
     gap: 2rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  
-  #user form .form_group { 
+
+  #user form .form_group {
     /* flex-direction: column; */
     gap: 2rem;
   }
-  
+
   #user form .form_info {
     gap: 1rem;
   }
-  
+
   #privacy img {
     height: 16rem;
   }
-  
+
   #privacy .content h4 {
     font-size: 1.2rem;
   }
-  
+
   #privacy .content p {
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.6rem;
   }
-  
+
   #privacy .content hr {
     margin-top: 1rem;
   }
-  
 }

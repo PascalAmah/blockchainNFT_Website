@@ -47,6 +47,7 @@
             addNavigationListeners();
             attachEventListeners();
             toggleMenu();
+            walletConnect();
 
             loader.addEventListener(function () {
               loader.style.display = "none"; // Loader end
@@ -73,7 +74,7 @@
 
       // Add event listeners to links within the dynamically loaded pages
       const navLinks = document.querySelectorAll(
-        "#header .profile_img a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
+        "#header .profile_dropdown a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
       );
       navLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
@@ -91,6 +92,17 @@
         });
       });
     }
+
+    // Profile Update function
+    document
+      .querySelectorAll("header .profile_dropdown ul li a")
+      .forEach((item) => {
+        item.addEventListener("click", function () {
+          document.querySelector(".profile_dropdown").style.opacity = "0";
+          document.querySelector(".profile_dropdown").style.visibility =
+            "hidden";
+        });
+      });
 
     // Profile Update function
     function attachEventListeners() {
@@ -184,5 +196,45 @@
         });
       });
     }
+
+    // Wallet connect
+    function walletConnect() {
+      const connectWalletButton = document.getElementById(
+        "connectWalletButton"
+      );
+      const walletAddressElement = document.getElementById("walletAddress");
+
+      if (connectWalletButton) {
+        connectWalletButton.addEventListener("click", async function () {
+          if (typeof window.ethereum !== "undefined") {
+            const web3 = new Web3(window.ethereum);
+            try {
+              // Request account access
+              const accounts = await ethereum.request({
+                method: "eth_requestAccounts",
+              });
+              const walletAddress = accounts[0];
+
+              // Shorten the wallet address (e.g., "0x1234...abcd")
+              const shortWalletAddress = `${walletAddress.slice(
+                0,
+                6
+              )}...${walletAddress.slice(-4)}`;
+
+              // Display the shortened wallet address
+              walletAddressElement.textContent = `${shortWalletAddress}`;
+
+              // Hide the Connect Wallet button
+              connectWalletButton.style.display = "none";
+            } catch (error) {
+              console.error("User denied account access", error);
+            }
+          } else {
+            console.error("MetaMask is not installed!");
+          }
+        });
+      }
+    }
   });
+  
 })();
