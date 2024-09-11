@@ -1323,7 +1323,6 @@ header .profile_dropdown ul li a:hover {
 #cardContainer .card img {
   border-radius: 2rem;
   width: 100%;
-  height: 60%;
   margin-bottom: 15px;
 }
 
@@ -2194,8 +2193,8 @@ footer .copyright {
   }
 
   #cardContainer .card {
-    width: 80vw;
-    height: auto;
+    width: 80dvw;
+    height: fit-content;
   }
 
   #create form .form_info input,
