@@ -1172,6 +1172,7 @@ header .profile_dropdown ul li a:hover {
 
 /* :::::::::: CREATE NFT :::::::::: */
 #create {
+  position: relative;
   padding-top: 8rem;
 }
 
@@ -1214,9 +1215,8 @@ header .profile_dropdown ul li a:hover {
   font-size: 1.4rem;
 }
 
-#create .img_upload .img_content button {
-  background: none;
-  border: none;
+#create .img_upload .img_content label {
+  width: fit-content;
   font-size: 1.3rem;
   color: blue;
   text-decoration: underline;
@@ -1271,6 +1271,70 @@ header .profile_dropdown ul li a:hover {
 
 #create form button {
   align-self: flex-end;
+}
+
+/* #create .nft_container {
+
+} */
+
+#cardContainer {
+  display: none;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;       
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 5rem;
+  z-index: 999;
+  height: 100vh;
+  background: #494343;
+  transition: transform 0.5s ease, z-index 0s;
+}
+
+#cardContainer .card {
+  /* width: 16rem; */
+  width: 280px;
+  height: 400px;
+  padding: 1.2rem;
+  border-radius: 3rem;
+  opacity: 1;
+  background: linear-gradient(
+    142deg,
+    rgba(233, 14, 178, 0.1) -1%,
+    rgba(255, 255, 255, 0.05) 101%
+  );
+  box-sizing: border-box;
+  border-width: 0.16rem 0rem 0.16rem 0rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2.24rem);
+  transition: transform 0.5s ease, z-index 0s;
+  justify-self: center;
+
+  
+  /* border: 1px solid #333;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #dd20b4; */
+}
+
+#cardContainer .card img {
+  border-radius: 2rem;
+  max-width: 100%;
+  height: 50%;
+  margin-bottom: 15px;
+}
+
+/* #cardContainer .card img:hover {
+  scale: 0.1rem;
+} */
+
+#cardContainer .card h3,
+#cardContainer .card p {
+  margin: 10px 0;
 }
 
 /* :::::::::: FOOTER :::::::::: */
@@ -1418,7 +1482,7 @@ footer .copyright {
   }
 
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   section .headings {
@@ -1886,8 +1950,13 @@ footer .copyright {
 
 @media (max-width: 480px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
+
+  /* form input,
+  form textarea {
+    font-size: 1.6rem;
+  } */
 
   section .headings p {
     font-size: 0.8rem;
@@ -1904,7 +1973,7 @@ footer .copyright {
 
   .btn_3 {
     display: inline-block;
-    padding: 0.4rem 1.4rem;
+    padding: 0.8rem 1.4rem;
   }
 
   header {
@@ -2016,7 +2085,12 @@ footer .copyright {
   }
 
   #influencers .cards .infl_profile p {
-    font-size: 1rem;
+    font-size: .8rem;
+  }
+
+  #influencers .cards .infl_details .btn_3 {
+    display: inline-block;
+    padding: 0.2rem 1.2rem;
   }
 
   #influencers .cards .infl_profile svg {
@@ -2091,7 +2165,7 @@ footer .copyright {
   }
 
   #user form .form_group {
-    /* flex-direction: column; */
+    flex-direction: column;
     gap: 2rem;
   }
 
@@ -2114,5 +2188,30 @@ footer .copyright {
 
   #privacy .content hr {
     margin-top: 1rem;
+  }
+
+  #cardContainer {
+    padding-top: 0;
+  }
+
+  #create form .form_info input,
+  #create form .form_info textarea {
+    font-size: 1.6rem;
+  }
+
+  #create form .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+
+  #create form button,
+  #cardContainer button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.6rem 2rem;
+    z-index: 999;
   }
 }

@@ -17,6 +17,7 @@
         // Add event listeners to navigation links
         addNavigationListeners();
         attachEventListeners();
+
         // toggleMenu();
       })
       .catch((error) => {
@@ -48,6 +49,7 @@
             attachEventListeners();
             toggleMenu();
             walletConnect();
+            nftCreate();
 
             loader.addEventListener(function () {
               loader.style.display = "none"; // Loader end
@@ -235,6 +237,98 @@
         });
       }
     }
+
+    function nftCreate() {
+      const imageUpload = document.getElementById("imageUpload");
+
+      if (!imageUpload) {
+        console.error("imageUpload element not found");
+        return;
+      }
+
+      imageUpload.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const imagePreview = document.getElementById("imagePreview");
+          const svgRemove = document.getElementById("svg");
+
+          svgRemove.style.display = "none";
+          imagePreview.src = e.target.result;
+          imagePreview.style.display = "block";
+        };
+
+        if (file) {
+          reader.readAsDataURL(file); // Read the image as a data URL
+        }
+      });
+
+      const nftCard = document.getElementById("nftForm");
+      nftCard.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nftName = document.getElementById("nftName").value;
+        const nftLink = document.getElementById("nftLink").value;
+        const nftCol = document.getElementById("nftCol").value;
+        const nftPrice = document.getElementById("nftPrice").value;
+        const description = document.getElementById("nftDescription").value;
+        const imageSrc = document.getElementById("imagePreview").src;
+
+        // Create a new card
+        const cardContainer = document.getElementById("cardContainer");
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const imgElement = document.createElement("img");
+        imgElement.src = imageSrc;
+
+        const nameElement = document.createElement("h3");
+        nameElement.textContent = nftName;
+
+        const linkElement = document.createElement("p");
+        linkElement.textContent = nftLink;
+
+        const colElement = document.createElement("p");
+        colElement.textContent = nftCol;
+
+        const priceElement = document.createElement("p");
+        priceElement.textContent = nftPrice;
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.textContent = description;
+
+        // Append elements to the card
+        card.appendChild(imgElement);
+        card.appendChild(nameElement);
+        card.appendChild(linkElement);
+        card.appendChild(colElement);
+        card.appendChild(priceElement);
+        card.appendChild(descriptionElement);
+
+        // Add the card to the container
+        cardContainer.style.display = 'flex'
+        cardContainer.appendChild(card);
+
+        const blurPage = document.getElementById("create");
+        blurPage.classList.add("blur");
+        // Optionally, reset the form
+        document.getElementById('nftForm').reset();
+        document.getElementById('imagePreview').style.display = 'none';
+
+      });
+
+      const nftClear = document.getElementById("nftref");
+      nftClear.addEventListener("click", function () {
+        cardContainer.style.display = 'none';
+        cardContainer.reset();
+      })
+    }
+
+    // addNavigationListeners();
+    // attachEventListeners();
+    // toggleMenu();
+    // walletConnect();
+    nftCreate();
   });
-  
 })();
