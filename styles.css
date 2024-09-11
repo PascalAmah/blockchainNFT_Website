@@ -47,7 +47,7 @@ a {
 
 .btn_1 {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.6rem 2rem;
   background: var(--secondary-color);
   color: var(--white);
   font-size: 1rem;
@@ -1282,7 +1282,7 @@ header .profile_dropdown ul li a:hover {
   flex-direction: column-reverse;
   gap: 2rem;
   align-items: center;
-  justify-content: center;       
+  justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -1290,20 +1290,20 @@ header .profile_dropdown ul li a:hover {
   padding-top: 5rem;
   z-index: 999;
   height: 100vh;
-  background: #494343;
+  background: rgba(26, 7, 21, 0.9);
   transition: transform 0.5s ease, z-index 0s;
 }
 
 #cardContainer .card {
   /* width: 16rem; */
   width: 280px;
-  height: 400px;
+  height: auto;
   padding: 1.2rem;
   border-radius: 3rem;
   opacity: 1;
   background: linear-gradient(
     142deg,
-    rgba(233, 14, 178, 0.1) -1%,
+    rgba(255, 255, 255, 0.1) -1%,
     rgba(255, 255, 255, 0.05) 101%
   );
   box-sizing: border-box;
@@ -1314,7 +1314,6 @@ header .profile_dropdown ul li a:hover {
   transition: transform 0.5s ease, z-index 0s;
   justify-self: center;
 
-  
   /* border: 1px solid #333;
   padding: 20px;
   margin-top: 20px;
@@ -1323,8 +1322,8 @@ header .profile_dropdown ul li a:hover {
 
 #cardContainer .card img {
   border-radius: 2rem;
-  max-width: 100%;
-  height: 50%;
+  width: 100%;
+  height: 60%;
   margin-bottom: 15px;
 }
 
@@ -2085,7 +2084,7 @@ footer .copyright {
   }
 
   #influencers .cards .infl_profile p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   #influencers .cards .infl_details .btn_3 {
@@ -2191,7 +2190,12 @@ footer .copyright {
   }
 
   #cardContainer {
-    padding-top: 0;
+    padding-top: 4rem;
+  }
+
+  #cardContainer .card {
+    width: 80vw;
+    height: auto;
   }
 
   #create form .form_info input,

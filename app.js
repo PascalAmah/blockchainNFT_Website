@@ -63,7 +63,7 @@
         });
     }
 
-    // Add event listeners to navigation links
+    // Add event all listeners to navigation links
     function addNavigationListeners() {
       const buttons = document.querySelectorAll("button[data-page]");
       buttons.forEach((button) => {
@@ -76,7 +76,7 @@
 
       // Add event listeners to links within the dynamically loaded pages
       const navLinks = document.querySelectorAll(
-        "#header .profile_dropdown a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a"
+        "#header .profile_dropdown a, #header .user_profile a, .logo a, .footer_link a, #hero .cta_btn a, #cardContainer a"
       );
       navLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
@@ -293,7 +293,7 @@
         colElement.textContent = nftCol;
 
         const priceElement = document.createElement("p");
-        priceElement.textContent = nftPrice;
+        priceElement.textContent = `$${nftPrice}`;
 
         const descriptionElement = document.createElement("p");
         descriptionElement.textContent = description;
@@ -318,11 +318,6 @@
 
       });
 
-      const nftClear = document.getElementById("nftref");
-      nftClear.addEventListener("click", function () {
-        cardContainer.style.display = 'none';
-        cardContainer.reset();
-      })
     }
 
     // addNavigationListeners();
