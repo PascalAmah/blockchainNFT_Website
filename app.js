@@ -290,7 +290,7 @@
         linkElement.textContent = nftLink;
 
         const colElement = document.createElement("p");
-        colElement.textContent = nftCol;
+        colElement.textContent = `#${nftCol}`;
 
         const priceElement = document.createElement("p");
         priceElement.textContent = `$${nftPrice}`;

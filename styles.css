@@ -882,7 +882,7 @@ header .profile_dropdown ul li a:hover {
 
 /* :::::::::: SUBSCRIBE :::::::::: */
 #subscribe {
-  padding: 8rem;
+  padding: 8rem 4%;
   background: url(images/pic.png);
 }
 
@@ -1290,14 +1290,18 @@ header .profile_dropdown ul li a:hover {
   padding-top: 5rem;
   z-index: 999;
   height: 100vh;
-  background: rgba(26, 7, 21, 0.9);
+  /* background: rgba(26, 7, 21, 0.9); */
+  background-image: url(images/Shihami\ Landing\ Page.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   transition: transform 0.5s ease, z-index 0s;
 }
 
 #cardContainer .card {
   /* width: 16rem; */
   width: 280px;
-  height: auto;
+  height: 80vh;
   padding: 1.2rem;
   border-radius: 3rem;
   opacity: 1;
@@ -1323,17 +1327,19 @@ header .profile_dropdown ul li a:hover {
 #cardContainer .card img {
   border-radius: 2rem;
   width: 100%;
+  height: 60%;
   margin-bottom: 15px;
 }
 
-/* #cardContainer .card img:hover {
-  scale: 0.1rem;
-} */
-
 #cardContainer .card h3,
-#cardContainer .card p {
+#cardContainer .card p { 
   margin: 10px 0;
 }
+
+
+
+
+
 
 /* :::::::::: FOOTER :::::::::: */
 footer {
@@ -1948,11 +1954,11 @@ footer .copyright {
   } */
 
   section .headings p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   section .headings h1 {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   .btn_2 {
@@ -1994,20 +2000,20 @@ footer .copyright {
   }
 
   #wallets .wallet_cards .wallet {
-    padding: 1rem;
+    padding: .8rem;
     text-align: center;
-    flex: 1 1 calc(33.33% - 1rem);
-    max-width: calc(35% - 1rem);
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50%);
   }
 
   #wallets .wallet img {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
   }
 
   #wallets .wallet p {
     margin-top: 1.2rem;
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 
   #how_it_works {
@@ -2015,28 +2021,31 @@ footer .copyright {
   }
 
   #how_it_works .headings h1 {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   #how_it_works .work_dir {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
   }
 
   #how_it_works .work_dir .icon svg {
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   #how_it_works .work_dir .line svg {
-    width: 4rem;
-    height: 4rem;
+    margin-top: .6rem;
+    transform: rotate(90deg);
+    width: 6rem;
+    height: 6rem;
   }
 
   #how_it_works .work_dir p {
-    margin-top: 0.6rem;
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 
   #collection_mobile .headings {
@@ -2091,8 +2100,12 @@ footer .copyright {
   }
 
   #subscribe form {
-    width: 20.5rem;
+    width: 24.5rem;
     height: 4rem;
+  }
+
+  #subscribe form input {
+    font-size: 1.6rem;
   }
 
   #subscribe form button {
@@ -2129,7 +2142,7 @@ footer .copyright {
 
   #user .top_header .user_profile {
     gap: 1.6rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     bottom: -6rem;
   }
 
@@ -2145,12 +2158,12 @@ footer .copyright {
 
   #user .user_info .header {
     gap: 2rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   #user .user_info form {
     gap: 2rem;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   #user form .form_group {
@@ -2162,16 +2175,21 @@ footer .copyright {
     gap: 1rem;
   }
 
+  #user form .form_info input,
+  #user form .form_info textarea {
+    font-size: 1.6rem;
+  }
+
   #privacy img {
     height: 16rem;
   }
 
   #privacy .content h4 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   #privacy .content p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.6rem;
   }
 
@@ -2180,12 +2198,25 @@ footer .copyright {
   }
 
   #cardContainer {
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 
   #cardContainer .card {
-    width: 80dvw;
-    height: fit-content;
+    width: 90vw;
+    height: 70vh;
+  }
+
+  #cardContainer .card img {
+    width: 100%;
+    height: 60%;
+  }
+
+  #cardContainer .card h3 {
+    font-size: 1.8rem;
+  }
+
+  #cardContainer .card p {
+    font-size: 1rem;
   }
 
   #create form .form_info input,
@@ -2208,6 +2239,7 @@ footer .copyright {
     right: 0;
     padding: 1.6rem 2rem;
     z-index: 999;
+    font-size: 1.6rem;
   }
 }
 
